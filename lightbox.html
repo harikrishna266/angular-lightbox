@@ -77,7 +77,9 @@ ul.pagination li{
 			<div class="image">	
 				<div class="close" ng-click="removelightbox()">
 				</div>
-				<img src='{{pop}}'>
+				<div >
+					<img src='{{pop}}'>
+				</div>
 			</div>
 			<ul class="pagination">	
 				<li ng-repeat="(key,group) in groups" ><button ng-click="nextpopup(group.thumb)">{{key}}</button></li>

@@ -69,7 +69,7 @@ ul.pagination li{
 <div >
 	<li ng-repeat="(key,group) in groups" >
 		<span >
-			<img width="100px" height="100px" src='{{group.thumb}}' ng-click="showpopup(group.thumb)" />
+			<img width="100px" height="100px" src='{{group.thumb}}' ng-click="showpopup(key)" />
 		</span>
 	</li>
 	<div class="black_overlay"  ng-show=showlight=='show'>

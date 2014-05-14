@@ -23,19 +23,6 @@ app.controller('lighbox', ['$scope', function($scope){
 
 }])
 
-
-app.directive('modal',function(){
-	return{
-		scope:{},
-		controller:function($scope){
-			$scope.one = function(){
-				console.log("asd");		
-			}
-		}
-	}
-
-})
-
 app.directive('lightbox', function() {
   return {
       restrict: 'E',
@@ -45,10 +32,8 @@ app.directive('lightbox', function() {
       link:function(scope, element, attrs){
       	scope.showLight = false;
       	scope.showpopup = function(imagenew){
-      		console.log("here");
-      		console.log(imagenew);
       		scope.showlight = 'show';
-      		scope.pop = imagenew;
+      		scope.pop = scope.groups[imagenew].image;
       	}
       	scope.removelightbox = function(){
       		scope.showlight = 'FALSE';
